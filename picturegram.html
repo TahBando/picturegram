@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PICTUREGRAM MAN</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+	<style type="text/css">
+		
+		*{
+			box-sizing: border-box;
+		}
+		
+		img {
+			width: 200px;
+			height: auto;
+			border: 2px solid orange;
+		}
+
+
+		#first{
+			width: calc(100% - 30px);
+			height:auto;
+		}
+		.small{
+			width: 28.5%;
+			height: auto;
+			margin: 3px;
+
+		}
+
+		h1{
+			text-align: center;
+			font-size: 50px;
+			margin: 0;
+		}
+
+		img:hover{
+			border: 2px solid blue;
+		}
+
+	</style>
+	
+</head>
+<body>
+
+
+
+<h1>PICTUREGRAM MAN</h1>
+
+	<img src="https://scontent-lga3-1.cdninstagram.com/vp/438cc9620f79f259bafd345863c2ccc6/5C2863FB/t51.2885-15/e35/39226645_322991398448169_6845078547174785024_n.jpg" id="first">
+	
+	<img src="https://scontent-lga3-1.cdninstagram.com/vp/c49d272bcd57c969e5fbac4e2713c47a/5C248204/t51.2885-15/e35/26320523_1732316290152223_4193843570915934208_n.jpg" class="small">
+	<img src="https://scontent-lga3-1.cdninstagram.com/vp/ce26d4868b18588b6cb5719cfd40c89a/5C5F1050/t51.2885-15/e35/37175387_1846890052285059_701722975275057152_n.jpg" class="small">
+	<img src="https://scontent-lga3-1.cdninstagram.com/vp/1a44734e0e1825c3e575f2494b5151fa/5C5A88BB/t51.2885-15/e35/28764824_411297389316069_8490882127779332096_n.jpg" class="small">
+	<img src="https://scontent-lga3-1.cdninstagram.com/vp/5ace97cb99934cb3e511c24b1779cd38/5C4118CA/t51.2885-15/e35/25018375_100642267401412_2070655904369344512_n.jpg"  class="small">
+	
+	<img src="https://scontent-lga3-1.cdninstagram.com/vp/acc314adb59a535da3b21328602a06fa/5C3E0AD4/t51.2885-15/e35/22499680_125274601468672_2581631724102352896_n.jpg"  class="small">
+	<img src="https://scontent-lga3-1.cdninstagram.com/vp/97348da3ba917c975342beef2af06bb5/5C2B03BA/t51.2885-15/e35/21479862_272933403208562_3788712792081563648_n.jpg" class="small">
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsJlydKaH6Hz3TJD7oaSphTjPbdfQkzTGBv2ogufis2B4Vts7Z" class="small">
+	<img src="https://scontent-ort2-2.cdninstagram.com/vp/f3765c74db696c3af2e8f637e7946985/5C2AD90F/t51.2885-15/e35/17661882_790590664423858_2090047471257387008_n.jpg" class="small">
+	<img src="https://vignette.wikia.nocookie.net/cursed-chat/images/3/3d/Only_dances.png/revision/latest?cb=20170705183306" class="small">
+
+<script type="text/javascript">
+		const bigImage = document.querySelector("#first");
+		const images = document.querySelectorAll(".small");
+
+		images.forEach(image => image.addEventListener("click", 
+			function(e) {
+				let clickedImage = e.target.src;
+				let swapImage = bigImage.src;
+				bigImage.src = clickedImage;
+				e.target.src = swapImage;
+			}
+			));
+	</script>
+
+</body>
+</html>
